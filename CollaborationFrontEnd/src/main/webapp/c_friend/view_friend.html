@@ -1,0 +1,36 @@
+<div class="container" ng-controller="FriendController as ctrl">
+
+     <p>
+     <p>
+     <p>
+     <p>
+     
+     <p>
+     <p>
+     <p>
+     <p>
+     
+     <div class="form-group has-feedback"></div>
+     
+     Search for Friend
+     
+    <p><input type="text" ng-model="sear_text"></p>
+    
+    
+      <div ng-repeat="friend in ctrl.friends | filter: sear_text">
+      
+           <fieldset>
+               <legend></legend>
+               
+                 <p>Name: {{friend.friendID}} &nbsp; &nbsp; &nbsp; Status: {{friend.status}}</p>
+                   <a href="#/chat">Send Message</a>
+                   
+                   
+                   
+                   
+            </fieldset>
+          </div>     
+          
+          
+       </div>   
+               

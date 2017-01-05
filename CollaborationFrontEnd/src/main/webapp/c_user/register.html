@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="generic-container" ng-controller="UserController as ctrl">
+<div ng-show='ctrl.user.errorMessage!="" '>
+<div class="alert alert-danger fade in">Error : {{ctrl.user.errorMessage}}</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<span class="lead">User Registration Form</span>
+</div>
+<div class="formcontainer">
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+
+<label>Register As...</label>
+<div class="container">
+<div class="radio">
+<label class="radio-inline">
+<input type="radio" name="role" value="student" ng-model="ctrl.user.role">Student
+</label>
+
+<label class="radio-inline">
+<input type="radio" name="role" value="alumni" ng-model="ctrl.user.role">Alumni
+</label>
+
+<label class="radio-inline">
+<input type="radio" name="role" value="employee" ng-model="ctrl.user.role">Employee
+</label>
+</div>
+<br>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="id">ID</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.id" id="id" class="userid form-control input-sm" placeholder="Enter your ID" required ng-minlength="3"/>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="name">Name</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.name" id="name" class="username form-control input-sm" placeholder="Enter your Name" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="mail">Email</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.email" id="email" class="email form-control input-sm" placeholder="Enter your Email" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Password</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.password" id="password" class="username form-control input-sm" placeholder="Enter your password" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="mob_no">Mobile No:</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.mob_no" id="mob_no" class="mob_no form-control input-sm" placeholder="Enter your contact number" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Date of Birth</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.dob" id="dob" class="username form-control input-sm" placeholder="Enter your date of birth" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Gender</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.gender" id="gender" class="username form-control input-sm" placeholder="Male or Female" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable" for="address">Address</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.address" id="address" class="username form-control input-sm" placeholder="Enter Address" required />
+</div>
+</div>
+</div>
+
+<!-- <div class="row">
+<div class="form-group col-md-8">
+<label class="col-md-2 control-label" for="image">Image</label>
+<div class="col-md-7">
+<input type="text" ng-model="ctrl.user.image" id="image" class="username form-control input-sm" placeholder="Upload Image" required />
+</div>
+</div>
+</div>
+ -->
+<div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Register" class="btn btn-primary btn-sm">
+<button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm">Reset Form</button>
+
+</div>
+</div>
+
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>

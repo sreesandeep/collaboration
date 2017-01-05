@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="UserController as ctrl">
+
+<div ng-show='ctrl.user.errorMessage'>
+<div class="alert alert-danger fade in">Error :
+        {{ctrl.user.errorMessage}}</div>
+   </div>     
+   
+  <div class = "panel panel-default"> 
+  <div class = "panel-heading">   
+  <span ng-hide="ctrl.userLoggedIn">
+  <form name="form" ng-submit="ctrl.login()" role="form">
+  
+  <div class="form-group" ng-class="{'has-error': form.username.$dirty && form.username.$error.required }">
+  <label for="username">User-name</label> 
+  <input type="text" name="username" id="name" class="form-control" ng-model="ctrl.user.name" required/>
+  <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">User-name is required</span>
+  </div>
+  
+  <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.password.$error.required }">
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" class="form-control" ng-model="ctrl.user.password" required/>
+  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required..</span>
+  
+  </div>
+  
+  <div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Log-In" class="btn btn-primary btn-sm"></div></div>
+  
+  </form>
+  </span>
+  </div>   
+ </div></div>
+</body>
+</html>

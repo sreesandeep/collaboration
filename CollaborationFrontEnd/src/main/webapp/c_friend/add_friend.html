@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">
+      You are not logged in.. Please login<a href="#/login">here</a>
+          Create a blog
+         </div>
+         
+         <div>
+            If you are not at register , you can register <a href="#/register">here</a>
+            </div>
+          </div>
+        </div> 
+
+<div ng-hide="currentUser==''">
+
+  <div class="generic-container" ng-controller="FriendController as ctrl">
+  
+      <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+      
+          <label>Please Fill the friend details..</label>
+          
+          
+          <div class="row">
+             <div class="form-group col-md-12">
+                 <label class="col-md-2 control-lable" for="title">Title</label>
+                    <div class="col-md-7">
+                       <input type="text" ng-model="ctrl.friend.title" id="title" class="title form-control input-sm" placeholder="Enter friend title"
+                                required ng-minlength="5" ng-maxlength="10">
+                              </div>
+                            </div>
+                          </div>
+                                
+           <div class="row">
+              <div class="form-group col-md-12">
+                  <label class="col-md-2 control-lable" for="description">Description</label>
+                     <div class="col-md-7">
+                         <textarea rows="100" cols="300" ng-model="ctrl.friend.description" id="description" class="description form-control input-sm"
+                                 placeholder="friend description" required ng-minlength="50" ng-maxlength="500">
+                                 </textarea>
+                              </div>
+                          </div>
+                       </div>
+                       
+               <div class="row">
+                  <div class="form-actions floatRight">
+                      <input type="submit" value="Create Blog" class="btn btn-warning btn-sm">
+                          <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm">Reset Blog</button>
+                        </div>
+                     </div>
+                </form>
+            </div>                             
+           
+           
+        </div>
+                                                      
+
+</body>
+</html>

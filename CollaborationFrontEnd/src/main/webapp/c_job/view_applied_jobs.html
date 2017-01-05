@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View Applied Jobs</title>
+</head>
+<body>
+
+<div class="container" ng-controller="JobController as ctrl">
+
+<div ng-repeat="Job in ctrl.jobsapplied">
+<div class="form-group">
+
+ID:<label>{{Job.JobID}}</label><br>
+UserName:<label>{{Job.UserID}}</label><br>
+DATE:<label>{{Job.dateapplied}}</label><br>
+
+
+<br><br>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

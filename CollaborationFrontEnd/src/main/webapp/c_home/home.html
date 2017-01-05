@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div ng-controller="HomeController as ctrl">
+		<div ng-hide="currentUser==''">
+			<div class="nav navbar-nav navbar-left">Welcome:{{currentUser.name}}
+				You logged in as:{{currentUser.role}}</div>
+				<div class="nav navbar-nav navbar-right">
+		<li><a href="#/myprofile">My Profile</a></li> <br>
+		</div>
+		</div>
+		<br>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3 class="bg-primary">Jobs</h3>
+					<p>You can view and apply for new jobs.</p>
+					<p>You can apply for particular job after login</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="bg-primary">Blogs</h3>
+					<p>You can view blogs before login</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="bg-primary">Alumni/Student</h3>
+					<p>This site is made for alumni and students</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+
+<div class="nav navbar-nav navbar-left">
+
+
+                      <!--      <li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">Manage Jobs<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/view_applied_jobs">View applied Jobs</a></li>
+							
+							<li><a href="#/post_job">Post a new Job</a></li>
+							
+						</ul></li>  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+						
+						<a href="#/manage_users">Manage Users</a>  
+						 -->
+
+</div><br>
+
+<div class="container" ng-controller="UserController as ctrl">
+
+
+
+ <div class="row">
+   <div class="table-response">
+   <table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Date of Birth</th>							
+							<th>Mobile No</th>
+							<th>Gender</th>
+							<th>Address</th>
+							<th>Role</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+				
+				
+							<tr ng-repeat="user in ctrl.users" class="success" ng-hide="user.id==currentUser.id">
+								<td>{{user.id}}</td>
+								<td>{{user.name}}</td>
+								<td>{{user.email}}</td>
+								<td>{{user.dob}}</td>
+								<td>{{user.mob_no}}</td>
+								<td>{{user.gender}}</td>
+								<td>{{user.address}}</td>
+								<td>{{user.role}}</td>
+								<td>{{user.status}}</td>			
+													
+				<td><button ng-hide="user.status=='A' || user.status=='R'" type="button" ng-click="ctrl.useraccept(user)" class="btn btn-warning btn-sm">ACCEPT</button></td>
+				
+                <td><button ng-hide="user.status=='A' || user.status=='R'" type="button" ng-click="ctrl.userreject(user)" class="btn btn-danger">REJECT</button></td>
+					</tr>
+					
+				
+</tbody>
+</table>
+   </div>
+ </div>
+
+
+</div>
+
+</body>
+</html>

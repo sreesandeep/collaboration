@@ -1,0 +1,16 @@
+
+<div ng-controller="ChatForumController" class="container">
+
+<p ng-repeat="message in messages | orderBy: 'time':true" class="message">
+  <time>{{message.time | date:'HH:mm'}}</time>
+  <span> {{message.message}}</span>
+</p>
+
+<form ng-submit="addMessage()" name="messageForm">
+  <input type="textarea" rows="4" cols="100" placeholder="new message..." ng-model="message"/><br>
+  <button>Send</button>
+  </form>
+  <hr/>
+  
+  </div>
+    

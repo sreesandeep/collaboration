@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container" ng-controller="JobController as ctrl">
+
+<div ng-repeat="selectedJob in ctrl.jobs">
+<div class="form-group">
+
+ID:<label>{{selectedJob.id}}</label><br>
+TITLE:<label>{{selectedJob.title}}</label><br>
+DATE:<label>{{selectedJob.dateTime}}</label><br>
+QUALIFICATION:<label>{{selectedJob.qualification}}</label><br>
+DESCRIPTION:<label>{{selectedJob.description}}</label><br>
+
+<button type="button" ng-click="ctrl.applyForJob(selectedJob.id)"
+          class="btn btn-warning btn-sm">Apply For Job</button>
+<br><br>
+</div>
+
+</div>
+</div>
+</body>
+</html>
